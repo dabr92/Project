@@ -1,0 +1,16 @@
+Manager: jonas jakobsson 46 Volkswagen 8725
+Developer: femton derriere-smile 1234 php 6997
+Developer: lars lester 90 java 3382
+Manager: erik larsson 98 jaguar 4906
+Employee: jonas klasan 54 5518
+Employee: johna banane 98 4270
+Developer: leason larsson 34 java 6022
+Employee: orup seger 87 6605
+Manager: andreas sten 87 volvo 2533
+Employee: markus stensop 34 4464
+Employee: loket klarsson 34 9385
+Manager: daniel marklund 45 volvo 2647
+Employee: jon densen 89 9038
+Employee: jonno her 30 7452
+Developer: andreas albertsson 54 sql 7743
+Employee: elias jonsson 45 7946
