@@ -185,6 +185,7 @@ while True:
                             empadded += 1
                             break
                         elif correctinfo == "n":
+                            print("Scrapping data and restarting the add employee process.")
                             break
                         else:
                             print("Please answer [Y]es or [N]o")
@@ -208,6 +209,7 @@ while True:
                             empadded += 1
                             break
                         elif correctinfo == "n":
+                            print("Scrapping data and restarting the add employee process.")
                             break
                         else:
                             print("Please answer [Y]es or [N]o")
