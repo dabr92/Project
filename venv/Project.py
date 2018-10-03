@@ -36,19 +36,20 @@ class Employee():
 
 #child class of Employee, initializes developer specific attributes but lets the parents class init initialize the general attributes
 class Developer(Employee):
-    alldevelopers = []
+    alldevelopers = 0
     def __init__(self, first, last, pay, plang, idnr=None):
         super().__init__(first, last, pay, idnr)
-        Developer.alldevelopers.append(self)
+        Developer.alldevelopers +=1
         self.plang = plang
     def setplang(self, plang):
         self.plang = plang
 
 #child class of Employee, initializes manager specific attributes but lets the parents class init initialize the general attributes
 class Manager(Employee):
-    allmanagers = []
+    allmanagers = 0
     def __init__(self, first, last, pay, companycar, idnr=None):
         super().__init__(first, last, pay, idnr)
+        Manager.allmanagers +=1
         self.companycar = companycar
     def setcompanycar(self, companycar):
         self.companycar = companycar
@@ -580,7 +581,7 @@ while True:
             elif re.search(".Manager.", str(all)) != None:
                 print("Firstname: {}, Lastname: {}, Company car brand: {}, idnr: {}".format(all.first, all.last, all.companycar, all.idnr))
 
-        print("There are {} Employees in the system\n".format(Employee.number_of_employees))
+        print("There are {} Employees in the system of which {} are developers, {} are managers and {} are general employees.\n".format(Employee.number_of_employees, Developer.alldevelopers, Manager.allmanagers, Employee.number_of_employees - Developer.alldevelopers - Manager.allmanagers))
     #start of quit module
     #writes all objects to disk and then quits
     elif start == "q":
