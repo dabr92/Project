@@ -530,6 +530,9 @@ while True:
                         errormessage +=1
             if errormessage == 0:
                 print("Nothing found!")
+        else:
+            print("Please enter a valid option")
+
 
     #start of delete module
     elif start == "d":
