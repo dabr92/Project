@@ -16,3 +16,5 @@ Developer: andreas albertsson 54 sql 7743
 Employee: elias jonsson 45 7946
 Developer: jonny jimmyville 45 python 5443
 Employee: sonny svensson 100000 5952
+Employee: klasan johnny 56 4339
+Developer: albin ekman 10000000000 python 2696

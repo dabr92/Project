@@ -94,7 +94,7 @@ print("Welcome to the Employee Management System")
 print("------------------------------------------")
 while True:
     #initial menu
-    start = input("What would you like to do? \n"
+    start = input("\nWhat would you like to do? \n"
                   "[A]dd employee \n"
                   "[D]elete employee \n"
                   "[C]hange employee info\n"
