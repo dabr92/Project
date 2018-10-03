@@ -439,99 +439,102 @@ while True:
         writetodisk()
     #start of find module
     elif start == "f":
-        searchfor = input("What would you like to search by\n"
-                          "[F]irst name\n"
-                          "[L]ast name\n"
-                          "[P]ay\n"
-                          "[Prog]ramming language\n"
-                          "[C]ompany car brand\n"
-                          "\n"
-                          "[N]othing\n"
-                          ">> ").lower()
-        if searchfor == "f":
-            #searcing by first name
-            searchname = input("What first name would you like to search for?").lower()
-            errormessage = 0
-            for all in Employee.allemployees:
-                if all.first == searchname:
-                    if re.search(".Employee.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.idnr)
-                        errormessage += 1
-                    elif re.search(".Developer.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.plang, all.idnr)
-                        errormessage += 1
-                    elif re.search(".Manager.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.companycar, all.idnr)
-                        errormessage += 1
-            if errormessage == 0:
-                print("Nothing found!")
+        while True:
+            searchfor = input("What would you like to search by\n"
+                              "[F]irst name\n"
+                              "[L]ast name\n"
+                              "[P]ay\n"
+                              "[Prog]ramming language\n"
+                              "[C]ompany car brand\n"
+                              "\n"
+                              "[B]ack\n"
+                              ">> ").lower()
+            if searchfor == "f":
+                #searcing by first name
+                searchname = input("What first name would you like to search for?").lower()
+                errormessage = 0
+                for all in Employee.allemployees:
+                    if all.first == searchname:
+                        if re.search(".Employee.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.idnr)
+                            errormessage += 1
+                        elif re.search(".Developer.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.plang, all.idnr)
+                            errormessage += 1
+                        elif re.search(".Manager.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.companycar, all.idnr)
+                            errormessage += 1
+                if errormessage == 0:
+                    print("Nothing found!")
 
-        elif searchfor == "l":
-            #searching by last name
-            searchname = input("What last name would you like to search for?").lower()
-            errormessage = 0
-            for all in Employee.allemployees:
-                if all.last == searchname:
-                    if re.search(".Employee.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.idnr)
-                        errormessage +=1
-                    elif re.search(".Developer.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.plang, all.idnr)
-                        errormessage += 1
-                    elif re.search(".Manager.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.companycar, all.idnr)
-                        errormessage += 1
-            if errormessage == 0:
-                print("Nothing found!")
+            elif searchfor == "l":
+                #searching by last name
+                searchname = input("What last name would you like to search for?").lower()
+                errormessage = 0
+                for all in Employee.allemployees:
+                    if all.last == searchname:
+                        if re.search(".Employee.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.idnr)
+                            errormessage +=1
+                        elif re.search(".Developer.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.plang, all.idnr)
+                            errormessage += 1
+                        elif re.search(".Manager.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.companycar, all.idnr)
+                            errormessage += 1
+                if errormessage == 0:
+                    print("Nothing found!")
 
-        elif searchfor == "p":
-            #searching by pay
-            searchname = input("What pay would you like to search for?")
-            errormessage = 0
-            for all in Employee.allemployees:
-                if all.pay == searchname:
-                    if re.search(".Employee.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.idnr)
-                        errormessage += 1
-                    elif re.search(".Developer.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.plang, all.idnr)
-                        errormessage += 1
-                    elif re.search(".Manager.", str(all)) != None:
-                        print(all.first, all.last, all.pay, all.companycar, all.idnr)
-                        errormessage += 1
-            if errormessage == 0:
-                print("Nothing found")
+            elif searchfor == "p":
+                #searching by pay
+                searchname = input("What pay would you like to search for?")
+                errormessage = 0
+                for all in Employee.allemployees:
+                    if all.pay == searchname:
+                        if re.search(".Employee.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.idnr)
+                            errormessage += 1
+                        elif re.search(".Developer.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.plang, all.idnr)
+                            errormessage += 1
+                        elif re.search(".Manager.", str(all)) != None:
+                            print(all.first, all.last, all.pay, all.companycar, all.idnr)
+                            errormessage += 1
+                if errormessage == 0:
+                    print("Nothing found")
 
-        elif searchfor == "prog":
-            #searching by programming language
-            searchname = input("What programming language would you like to search for?").lower()
-            errormessage = 0
-            for all in Employee.allemployees:
-                if re.search(".Developer.", str(all)) == None:
-                    continue
-                else:
-                    if all.plang == searchname:
-                        print(all.first, all.last, all.pay, all.plang)
-                        errormessage += 1
-            if errormessage == 0:
-                print("Nothing found!")
+            elif searchfor == "prog":
+                #searching by programming language
+                searchname = input("What programming language would you like to search for?").lower()
+                errormessage = 0
+                for all in Employee.allemployees:
+                    if re.search(".Developer.", str(all)) == None:
+                        continue
+                    else:
+                        if all.plang == searchname:
+                            print(all.first, all.last, all.pay, all.plang)
+                            errormessage += 1
+                if errormessage == 0:
+                    print("Nothing found!")
 
 
-        elif searchfor == "c":
-            #searching by company car
-            searchname = input("What brand company car would you like to search for?").lower()
-            errormessage = 0
-            for all in Employee.allemployees:
-                if re.search(".Manager.", str(all)) == None:
-                    continue
-                else:
-                    if all.companycar == searchname:
-                        print(all.first, all.last, all.pay, all.companycar)
-                        errormessage +=1
-            if errormessage == 0:
-                print("Nothing found!")
-        else:
-            print("Please enter a valid option")
+            elif searchfor == "c":
+                #searching by company car
+                searchname = input("What brand company car would you like to search for?").lower()
+                errormessage = 0
+                for all in Employee.allemployees:
+                    if re.search(".Manager.", str(all)) == None:
+                        continue
+                    else:
+                        if all.companycar == searchname:
+                            print(all.first, all.last, all.pay, all.companycar)
+                            errormessage +=1
+                if errormessage == 0:
+                    print("Nothing found!")
+            elif searchfor == "b":
+                break
+            else:
+                print("Please enter a valid option")
 
 
     #start of delete module

@@ -15,3 +15,4 @@ Employee: jonno her 30 7452
 Developer: andreas albertsson 54 sql 7743
 Employee: elias jonsson 45 7946
 Developer: jonny jimmyville 45 python 5443
+Employee: sonny svensson 100000 5952
