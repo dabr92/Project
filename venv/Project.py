@@ -542,7 +542,7 @@ while True:
     elif start == "d":
         suredelete = 0
         while suredelete == 0:
-            deleteinput = input("Enter idnr of the person you wish to delete from the system, or [B]ack").lower()
+            deleteinput = input("Enter idnr of the person you wish to delete from the system, or [B]ack\n>> ").lower()
             if deleteinput == "b":
                 break
             nofound = 0
@@ -551,7 +551,7 @@ while True:
                     nofound +=1
                     while True:
                         #makes sure user wants to delete selected employee
-                        deleteassurance = input("Are you sure you want to delete:\nFirstname: {}, Lastname: {}, idnr: {} [Y]es [N]o".format(all.first, all.last, all.idnr)).lower()
+                        deleteassurance = input("Are you sure you want to delete:\nFirstname: {}, Lastname: {}, idnr: {} [Y]es [N]o\n>> ".format(all.first, all.last, all.idnr)).lower()
                         if deleteassurance == "y" :
                             print("Firstname: {}, Lastname: {}, idnr: {} has been deleted".format(all.first, all.last, all.idnr))
                             all.setfirst(None)
@@ -560,10 +560,14 @@ while True:
                             all.setidnr(None)
                             writetodisk()
                             Employee.allemployees = []
+                            Employee.number_of_employees = 0
+                            Developer.alldevelopers = 0
+                            Manager.allmanagers = 0
                             loadingfromfile()
                             break
                             suredelete +=1
                         elif deleteassurance == "n":
+                            print("Aborting deletion")
                             break
                         else:
                             print("Please answer [Y]es or [N]o")
