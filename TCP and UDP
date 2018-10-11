@@ -1,0 +1,15 @@
+TCP modell:
+            Application: hanterar kodning och dialog
+            Host-to-Host: hanterar data-segmentation och error control
+            Internet: Skickar paketen dit dom ska oberoende av väg.
+            Network access: hanterar fysiska lagren.
+            
+TCP kräver att en anslutning blir upprättad först.
+TCP bryter ner datan i segment och sätter ihop den när den har kommit fram.
+Om någon data tappats på vägen så sänder TCP om den.
+Baserad på OSI modellen.
+
+
+UDP kräver inte att en anslutning upprättas först.
+Lämnar pålitlighet till applikationen.
+Snabbt. Om någon data tappas på vägen så sänds den inte om.
